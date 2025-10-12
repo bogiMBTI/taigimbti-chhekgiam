@@ -20,6 +20,10 @@ const personalities = {
     "INTP": {
         name: "邏輯學家 - 發明家",
         description: "他們是充滿好奇心的思想家，熱愛探索複雜的理論和抽象的概念。他們的思考快速且精確，喜歡從事獨立研究。雖然有時閉思，但內心充滿了對知識的渴望。"
+    },
+    "ISTJ": {
+        name: "後勤 - 物流師",
+        description: "你是恬恬仔做閣gâu揹重擔ê人。做代誌照起工，所有的細節你攏會照顧甲到。你毋是ài展風神ê角色，毋過團體若有你絕對穩觸觸！"
     }
     // 你可以繼續在這裡新增其他 11 個性格的資料...
 };
@@ -39,4 +43,5 @@ if (personalityType && personalities[personalityType]) {
     // 如果沒有找到，顯示錯誤訊息
     document.getElementById('personality-type').innerText = "找不到你的性格！";
     document.getElementById('description').innerText = "請重新進行測驗。";
+
 }
