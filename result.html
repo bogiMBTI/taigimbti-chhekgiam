@@ -13,5 +13,24 @@
     </div>
     
     <script src="results.js"></script>
+    
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        // 修復大小寫問題，並確保變數名稱正確
+        const resultType = urlParams.get('type').toUpperCase();
+
+        // 邏輯判斷
+        if (resultType && personalities[resultType]) {
+            const result = personalities[resultType];
+            
+            // 將結果顯示在網頁上
+            document.getElementById('personality-type').innerText = result.name;
+            document.getElementById('description').innerText = result.description;
+        } else {
+            // 如果沒有找到，顯示錯誤訊息
+            document.getElementById('personality-type').innerText = "找不到你的性格！";
+            document.getElementById('description').innerText = "請重新進行測驗。";
+        }
+    </script>
 </body>
 </html>
